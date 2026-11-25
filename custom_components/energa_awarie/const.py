@@ -4,6 +4,7 @@ DOMAIN = "energa_awarie"
 
 # Configuration keys
 CONF_COUNTY = "county"
+CONF_POWIAT_QUERY = "powiat_query"
 CONF_AREA = "area"  # Gmina
 CONF_CITY = "city"
 CONF_STREET = "street"
@@ -12,6 +13,7 @@ CONF_CALENDAR_ENTITY = "calendar_entity"  # Optional calendar to create events
 # Source URL
 ENERGA_BASE_URL = "https://energa-operator.pl"
 ENERGA_PLANNED_URL = f"{ENERGA_BASE_URL}/uslugi/awarie-i-wylaczenia/wylaczenia-planowane"
+ENERGA_CURRENT_URL = f"{ENERGA_BASE_URL}/uslugi/awarie-i-wylaczenia/wylaczenia-biezace"
 
 # Attributes
 ATTR_START = "start"
@@ -30,6 +32,15 @@ SHUTDOWN_TYPE = {
     "1": "Outage",
     "2": "Planned",
 }
+
+SHUTDOWN_TYPE_OUTAGE = "1"
+SHUTDOWN_TYPE_PLANNED = "2"
+
+# Coordinator
+UPDATE_INTERVAL_CURRENT = 900  # 15 min — mapa bieżących
+UPDATE_INTERVAL_PLANNED = 43200  # 12 h — harmonogram planowych
+
+CONF_ENTRY_COORDINATOR = "coordinator"
 
 # County select options (ID -> display name)
 COUNTY_OPTIONS = {
@@ -149,3 +160,25 @@ COUNTY_OPTIONS = {
 # Map county ID -> (deprecated structure) retained only if future migration needed
 # Can be safely removed later; not used now.
 COUNTY_ID_MAP = {}  # intentionally emptied; matching now uses county id only
+
+# Powiaty grodzkie (nazwa = gmina w danych Energi)
+CITY_COUNTY_IDS = frozenset(
+    {
+        462,
+        463,
+        464,
+        1462,
+        2261,
+        2262,
+        2263,
+        2264,
+        2861,
+        2862,
+        3061,
+        3062,
+        3261,
+    }
+)
+
+ATTR_OUTAGES = "outages"
+ATTR_OUTAGES_COUNT = "awarie"
