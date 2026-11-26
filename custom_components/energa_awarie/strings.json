@@ -62,6 +62,9 @@
       "active_outage": {
         "name": "Awaria aktywna"
       },
+      "planned_outage_soon": {
+        "name": "Zagrożenie planowanym wyłączeniem"
+      },
       "state_attributes": {
         "active_count": { "name": "Liczba aktywnych awarii" }
       }

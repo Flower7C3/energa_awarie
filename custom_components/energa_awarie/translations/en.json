@@ -62,6 +62,9 @@
       "active_outage": {
         "name": "Active outage"
       },
+      "planned_outage_soon": {
+        "name": "Planned outage soon"
+      },
       "state_attributes": {
         "active_count": { "name": "Active outage count" }
       }

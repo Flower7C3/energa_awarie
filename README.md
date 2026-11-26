@@ -10,7 +10,8 @@ Fork rozwojowy ([Flower7C3](https://github.com/Flower7C3/energa_awarie)) na bazi
 
 | Encja | Typ | Znaczenie |
 |-------|-----|-----------|
-| **Awaria aktywna** | `binary_sensor` | Trwa awaria awaryjna (`shutdownType` 1) na mapie bieżących wyłączeń — odświeżanie ~15 min |
+| **Awaria aktywna** | `binary_sensor` (`problem`) | Trwa awaria — widoczna też w panelu HA **`/maintenance`** (jak Librus *grade_risk*) |
+| **Zagrożenie planowanym wyłączeniem** | `binary_sensor` (`problem`) | Włączone, gdy plan za ≤ 2 dni — też na **`/maintenance`** |
 | **Planowane wyłączenie** | `sensor` (dni) | Dni do najbliższego planu + atrybut `outages` (lista) — feed planowanych |
 
 Dodatkowo:

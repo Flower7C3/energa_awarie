@@ -1,7 +1,7 @@
 {
   "domain": "energa_awarie",
   "name": "Energa Awarie",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "config_flow": true,
   "documentation": "https://github.com/Flower7C3/energa_awarie",
   "issue_tracker": "https://github.com/chauek/energa_awarie/issues",

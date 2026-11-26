@@ -42,6 +42,9 @@ UPDATE_INTERVAL_PLANNED = 43200  # 12 h — harmonogram planowych
 
 CONF_ENTRY_COORDINATOR = "coordinator"
 
+# Panel /maintenance (HA) pokazuje binary_sensor z device_class problem — jak Librus grade_risk
+PLANNED_ALERT_DAYS = 2
+
 # County select options (ID -> display name)
 COUNTY_OPTIONS = {
     213: "milicki",
